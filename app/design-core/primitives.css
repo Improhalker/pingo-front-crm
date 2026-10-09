@@ -1,0 +1,44 @@
+/* Exact reference palette from DESIGN_SYSTEM.md, section 2. */
+:root {
+  --primitive-primary-purple: #5b2a86;
+  --primitive-primary-dark: #371653;
+  --primitive-primary-light: #7c45b1;
+  --primitive-accent-yellow: #fbbf24;
+  --primitive-accent-dark: #d99a00;
+  --primitive-accent-light: #ffe7a3;
+  --primitive-background: #faf8fc;
+  --primitive-surface: #ffffff;
+  --primitive-surface-secondary: #f4f0f7;
+  --primitive-border: #e7e0ec;
+  --primitive-text-primary: #241b2b;
+  --primitive-text-secondary: #756a7c;
+  --primitive-text-muted: #9b92a0;
+  --primitive-success: #2e9d6f;
+  --primitive-danger: #d95757;
+  --primitive-warning: #e59b32;
+  --primitive-info: #6e61a8;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  /* Shape by component (DESIGN_SYSTEM.md §8): inner pieces, controls, floating lists, surfaces. */
+  --radius-inner: 6px;
+  --radius-control: 8px;
+  --radius-popover: 12px;
+  --radius-card: 16px;
+  /* Direction B density: comfortable 44px controls, 36px inside compact groups. */
+  --control-height: 44px;
+  --control-height-compact: 36px;
+  /* Motion: short opacity/translate only; disabled by prefers-reduced-motion. */
+  --motion-fast: 120ms;
+  --motion-base: 180ms;
+  --motion-ease: cubic-bezier(0.2, 0, 0, 1);
+  /* Layers, lowest to highest. Reka overlays (menus, tooltips, sheets, dialogs) use --layer-overlay. */
+  --layer-sticky: 20;
+  --layer-chat: 40;
+  --layer-overlay: 50;
+  --glass-blur: 16px;
+}

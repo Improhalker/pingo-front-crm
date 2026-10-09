@@ -1,0 +1,90 @@
+/* Exact light/dark tables from DESIGN_SYSTEM.md, section 4. */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #faf8fc;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f4f0f7;
+  --color-border-subtle: #e7e0ec;
+  --color-border-control: #8b8094;
+  --color-text-primary: #241b2b;
+  --color-text-secondary: #756a7c;
+  --color-text-muted: #756a7c;
+  --color-action-primary-bg: #5b2a86;
+  --color-action-primary-hover: #371653;
+  --color-action-primary-active: #371653;
+  --color-action-primary-fg: #ffffff;
+  --color-accent-bg: #fbbf24;
+  --color-accent-fg: #241b2b;
+  --color-brand-subtle-bg: #f0e8f7;
+  --color-brand-subtle-fg: #5b2a86;
+  --color-link: #5b2a86;
+  --color-focus: #5b2a86;
+  --sidebar-bg: #371653;
+  --sidebar-fg: #f6f0fa;
+  --sidebar-fg-secondary: #d9c9e6;
+  --sidebar-active-bg: #5b2a86;
+  --sidebar-active-fg: #ffffff;
+  --color-status-success-bg: #e8f5ee;
+  --color-status-success-fg: #1b7350;
+  --color-status-danger-bg: #fcecec;
+  --color-status-danger-fg: #b33535;
+  --color-status-warning-bg: #fff4df;
+  --color-status-warning-fg: #85520d;
+  --color-status-info-bg: #f0ebf8;
+  --color-status-info-fg: #594a91;
+  /* Direction B (05/10/2026): light elevation for surfaces, glass only on the navbar. */
+  --elevation-1:
+    0 1px 2px rgb(36 27 43 / 0.06), 0 6px 20px rgb(36 27 43 / 0.06);
+  --elevation-2: 0 4px 14px rgb(36 27 43 / 0.14);
+  --elevation-3: 0 16px 40px rgb(36 27 43 / 0.2);
+  --glass-bg: rgb(255 255 255 / 0.85);
+  --color-selected-bg: #5b2a86;
+  --color-selected-fg: #ffffff;
+  --glass-border: rgb(231 224 236 / 0.8);
+  --color-overlay: rgb(36 27 43 / 0.5);
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #18121f;
+  --color-surface: #241b2d;
+  --color-surface-secondary: #2e2338;
+  --color-border-subtle: #45364f;
+  --color-border-control: #8b7c95;
+  --color-text-primary: #f6f0fa;
+  --color-text-secondary: #c5b8ce;
+  --color-text-muted: #b5a6bf;
+  --color-action-primary-bg: #7c45b1;
+  --color-action-primary-hover: #6e379f;
+  --color-action-primary-active: #5b2a86;
+  --color-action-primary-fg: #ffffff;
+  --color-accent-bg: #fbbf24;
+  --color-accent-fg: #241b2b;
+  --color-brand-subtle-bg: #3b2752;
+  --color-brand-subtle-fg: #e1c6fa;
+  --color-link: #d1aef2;
+  --color-focus: #ffe7a3;
+  --sidebar-bg: #21152c;
+  --sidebar-fg: #f6f0fa;
+  --sidebar-fg-secondary: #d9c9e6;
+  --sidebar-active-bg: #5b2a86;
+  --sidebar-active-fg: #ffffff;
+  --color-status-success-bg: #18392c;
+  --color-status-success-fg: #78d9ad;
+  --color-status-danger-bg: #45232c;
+  --color-status-danger-fg: #ffabab;
+  --color-status-warning-bg: #40311e;
+  --color-status-warning-fg: #f7c477;
+  --color-status-info-bg: #302442;
+  --color-status-info-fg: #c9b6f2;
+  /* Shadows are barely visible on dark surfaces; separation comes from borders and surface steps. */
+  --elevation-1: 0 1px 2px rgb(0 0 0 / 0.3);
+  --elevation-2: 0 4px 14px rgb(0 0 0 / 0.5);
+  --elevation-3: 0 16px 40px rgb(0 0 0 / 0.6);
+  --glass-bg: rgb(36 27 45 / 0.85);
+  /* #7c45b1 reaches only 2.36:1 against the dark group surface; the light lilac reaches 3:1+. */
+  --color-selected-bg: #e1c6fa;
+  --color-selected-fg: #18121f;
+  --glass-border: rgb(69 54 79 / 0.8);
+  --color-overlay: rgb(12 8 16 / 0.65);
+}

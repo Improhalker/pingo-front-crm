@@ -1,0 +1,11 @@
+#!/bin/sh
+project_root=$(git rev-parse --show-toplevel) || exit 1
+if [ -x "$project_root/.tools/node-v24.21.0-win-x64/node.exe" ]; then
+  node_binary="$project_root/.tools/node-v24.21.0-win-x64/node.exe"
+elif command -v node >/dev/null 2>&1; then
+  node_binary=node
+else
+  echo 'Node compatível é obrigatório para validar o histórico.' >&2
+  exit 1
+fi
+exec "$node_binary" "$project_root/scripts/check-agent-changes.mjs" --staged

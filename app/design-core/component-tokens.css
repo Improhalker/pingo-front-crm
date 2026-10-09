@@ -1,0 +1,52 @@
+:root {
+  --sidebar-focus: var(--color-accent-bg);
+  --field-bg: var(--color-surface);
+  --field-fg: var(--color-text-primary);
+  --field-border: var(--color-border-control);
+  --field-radius: var(--radius-control);
+  --card-bg: var(--color-surface);
+  --card-border: var(--color-border-subtle);
+  --card-radius: var(--radius-card);
+  --card-padding: var(--space-6);
+  /* Direction B: surfaces get level 1 (soft shadow in light, 1px ring in dark). */
+  --card-shadow: var(--elevation-1);
+  --button-bg: var(--color-action-primary-bg);
+  --button-fg: var(--color-action-primary-fg);
+  --button-radius: var(--radius-control);
+  --navbar-bg: var(--glass-bg);
+  --navbar-border: var(--glass-border);
+  --table-row-min-height: 64px;
+  --sidebar-hover-bg: rgb(255 255 255 / 0.08);
+  --sidebar-current-bg: rgb(255 255 255 / 0.12);
+  --sidebar-divider: rgb(255 255 255 / 0.12);
+
+  /* shadcn-vue roles mapped to PingoFin semantic tokens (never to shadcn's default palette). */
+  --background: var(--color-bg);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-action-primary-bg);
+  --primary-foreground: var(--color-action-primary-fg);
+  --primary-hover: var(--color-action-primary-hover);
+  --primary-active: var(--color-action-primary-active);
+  --muted: var(--color-surface-secondary);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-surface-secondary);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: var(--color-status-danger-fg);
+  --destructive-foreground: var(--color-bg);
+  --border: var(--color-border-subtle);
+  --input: var(--color-border-control);
+  --ring: var(--color-focus);
+  --radius: var(--radius-control);
+  --sidebar: var(--sidebar-bg);
+  --sidebar-foreground: var(--sidebar-fg);
+  --sidebar-primary: var(--sidebar-active-bg);
+  --sidebar-primary-foreground: var(--sidebar-active-fg);
+  --sidebar-accent: var(--sidebar-hover-bg);
+  --sidebar-accent-foreground: var(--sidebar-fg);
+  --sidebar-border: var(--sidebar-divider);
+  --sidebar-ring: var(--sidebar-focus);
+}

@@ -1,0 +1,871 @@
+{
+  "schemaVersion": 1,
+  "changes": [
+    {
+      "id": "2026-10-05-historico-agentes",
+      "occurredAt": "2026-10-05T21:04:00.000Z",
+      "agent": "Codex",
+      "summary": "Criei o histórico de alterações dos agentes em JSON no frontend, exclusivo do administrador master, com resumos de até 300 caracteres, detalhes expansíveis e registro obrigatório nas instruções e na validação de commits.",
+      "detailsId": "2026-10-05-historico-agentes-detalhes"
+    },
+    {
+      "id": "2026-10-05-kanban-interno",
+      "occurredAt": "2026-10-05T19:45:00.000Z",
+      "agent": "Claude Code",
+      "summary": "Criei o Kanban interno do projeto em /kanban: quadro único no MySQL com quatro colunas, cadastro, edição, exclusão, arrastar e soltar e alternativa por teclado. Acesso por feature flag e allowlist de e-mails validada no backend, sem vínculo com organizações.",
+      "detailsId": "2026-10-05-kanban-interno-detalhes"
+    },
+    {
+      "id": "2026-10-05-refinamento-visual-direcao-b",
+      "occurredAt": "2026-10-06T00:22:04.000Z",
+      "agent": "Claude Code",
+      "summary": "Apliquei a direção visual B (Acolhedora): Manrope local, shadcn-vue mapeado aos tokens, Lucide, shell com sidebar recuada e navbar glass, listagem e cadastro de empresas, home da empresa, Pingo flutuante local e prévia ilustrativa de dashboard na galeria de desenvolvimento.",
+      "detailsId": "2026-10-05-refinamento-visual-direcao-b-detalhes"
+    },
+    {
+      "id": "2026-10-06-proximos-quatro-modulos",
+      "occurredAt": "2026-10-06T17:39:16.000Z",
+      "agent": "Codex",
+      "summary": "Criei quatro cards no Kanban para 06/10: clientes/categorias, receitas/recebimentos, despesas/pagamentos e dashboard real. Incluí dependências, recortes e critérios de aceite; movi permissões para Concluído conforme confirmação do usuário.",
+      "detailsId": "2026-10-06-proximos-quatro-modulos-detalhes"
+    },
+    {
+      "id": "2026-10-06-direcao-visual-landing-wiser",
+      "occurredAt": "2026-10-06T18:16:27.022Z",
+      "agent": "Codex",
+      "summary": "Criei no pingolandingpage o guia visual da landing PingoFin inspirado na Wiser: mapa de seções, identidade roxa/amarela, logo adaptativo, sliders, direção mobile e roteiros de vídeos 2D do Pingo. Diferenciei observação visual, análise de código e propostas.",
+      "detailsId": "2026-10-06-direcao-visual-landing-wiser-detalhes"
+    },
+    {
+      "id": "2026-10-06-pingo-3d-acenando-v1",
+      "occurredAt": "2026-10-06T19:01:06.473Z",
+      "agent": "Codex",
+      "summary": "Gerei a primeira proposta 3D do Pingo sorrindo e acenando, com PNG transparente de 1254 × 1254 px. Salvei o asset e o prompt no pingolandingpage, preservando a referência oficial e as versões 2D existentes.",
+      "detailsId": "2026-10-06-pingo-3d-acenando-v1-detalhes"
+    },
+    {
+      "id": "2026-10-06-pingo-3d-feliz-v1",
+      "occurredAt": "2026-10-06T19:08:28.499Z",
+      "agent": "Codex",
+      "summary": "Gerei a versão feliz do Pingo 3D, com alegria tranquila e braços levemente abertos, usando o modelo anterior como referência. Salvei o PNG transparente de 1254 × 1254 px e o prompt no pingolandingpage; conferi alfa e integridade da cópia."
+    },
+    {
+      "id": "2026-10-06-simbolo-v1-favicon-navbar",
+      "occurredAt": "2026-10-06T19:19:27.569Z",
+      "agent": "Codex",
+      "summary": "Organizei o símbolo v1 escolhido pelo usuário no CRM e na landing: mestre preservado, PNGs transparentes para navbar e favicon ICO com quatro tamanhos. Incluí procedência, prompt, guia de uso e exportador reproduzível; não alterei componentes de navegação.",
+      "detailsId": "2026-10-06-simbolo-v1-favicon-navbar-detalhes"
+    },
+    {
+      "id": "2026-10-06-pingo-3d-oito-poses",
+      "occurredAt": "2026-10-06T19:24:51.597Z",
+      "agent": "Codex",
+      "summary": "Criei individualmente oito poses 3D transparentes do Pingo: pensando, analisando, insight, atenção, organizando, explicando, comemorando e descansando. Organizei PNGs, prompts e catálogo de dez poses no pingolandingpage.",
+      "detailsId": "2026-10-06-pingo-3d-oito-poses-detalhes"
+    },
+    {
+      "id": "2026-10-06-landing-vue-primeiro-prototipo",
+      "occurredAt": "2026-10-06T19:36:25.621Z",
+      "agent": "Codex",
+      "summary": "Criei o primeiro protótipo da landing PingoFin no projeto pingolandingpage: Vue, shadcn, Anime.js, Pingo 3D, abas, trilhos e FAQ. Preparei placeholders azuis, catálogo de imagens e documentação para substituir os assets.",
+      "detailsId": "2026-10-06-landing-vue-primeiro-prototipo-detalhes"
+    },
+    {
+      "id": "2026-10-06-landing-sites-preparacao",
+      "occurredAt": "2026-10-06T19:51:21.665Z",
+      "agent": "Codex",
+      "summary": "Cadastrei a prévia PingoFin no Sites do ChatGPT e configurei hospedagem estática. Atualizei as instruções para compartilhar a landing e validei o build antes de salvar o código e preparar a publicação.",
+      "detailsId": "2026-10-06-landing-sites-preparacao-detalhes"
+    },
+    {
+      "id": "2026-10-06-landing-sites-publicacao",
+      "occurredAt": "2026-10-06T19:56:19.814Z",
+      "agent": "Codex",
+      "summary": "Publiquei a prévia da landing PingoFin no Sites do ChatGPT, com acesso público pelo link. O deploy da versão 1 foi confirmado; o pacote contém apenas o build estático da landing, com imagens e telas provisórias.",
+      "detailsId": "2026-10-06-landing-sites-publicacao-detalhes"
+    },
+    {
+      "id": "2026-10-06-clientes-categorias-receitas-recebimentos",
+      "occurredAt": "2026-10-06T21:23:58.110Z",
+      "agent": "Claude Code",
+      "summary": "Validei que o tópico 01 não existia e implementei clientes e categorias por empresa e a primeira versão de receitas e recebimentos: API Laravel com dinheiro exato, idempotência, lock da obrigação e auditoria atômica, telas Nuxt e testes de isolamento, permissões e concorrência.",
+      "detailsId": "2026-10-06-clientes-categorias-receitas-recebimentos-detalhes"
+    },
+    {
+      "id": "2026-10-06-revisao-versionamento-tarefas-01-02",
+      "occurredAt": "2026-10-07T00:45:09.904Z",
+      "agent": "Codex",
+      "summary": "Revisei as tarefas 01/02 concluídas pelo Claude e confirmei que estavam sem commit na main. Validei backend e frontend, declarei BCMath no Composer sem atualizar versões e preparei o versionamento por assunto, com evidências em docs/FINANCE_RELEASE_VALIDATION.md.",
+      "detailsId": "2026-10-06-revisao-versionamento-tarefas-01-02-detalhes"
+    },
+    {
+      "id": "2026-10-06-acesso-master-kanban",
+      "occurredAt": "2026-10-07T01:44:20.372Z",
+      "agent": "Codex",
+      "summary": "Corrigi o acesso ao Kanban interno para contas master da plataforma, substituindo a allowlist provisória. Mantive a flag de ativação e os bloqueios de contas de empresas; ajustei login, retorno e logout da página e validei autorização, CSRF e frontend.",
+      "detailsId": "2026-10-06-acesso-master-kanban-detalhes"
+    },
+    {
+      "id": "2026-10-06-despesas-pagamentos-card-03",
+      "occurredAt": "2026-10-07T02:00:23.547Z",
+      "agent": "Codex",
+      "summary": "Implementei o card 03: despesas por empresa, pagamentos parciais/totais, filtros de vencimento e situação, auditoria atômica e proteção contra duplicidade. Validei 300/100/200, isolamento e interface mobile; atualizei o guia dos agentes.",
+      "detailsId": "2026-10-06-despesas-pagamentos-card-03-detalhes"
+    },
+    {
+      "id": "2026-10-06-dashboard-card-04",
+      "occurredAt": "2026-10-07T02:56:24.525Z",
+      "agent": "Codex",
+      "summary": "Implementei o card 04: dashboard com entradas, saídas e resultado mensais reais, pendências gerais, gráfico diário e vencimentos. API isolada por empresa, valores exatos e leitura consistente. Interface responsiva, testes e documentação.",
+      "detailsId": "2026-10-06-dashboard-card-04-detalhes"
+    },
+    {
+      "id": "2026-10-07-kanban-ajustes-login-quitacao",
+      "occurredAt": "2026-10-07T14:03:04.833Z",
+      "agent": "Codex",
+      "summary": "Criei os cards 05 e 06 em A fazer no Kanban: login direto na organização única por e-mail; vencimento editável e receita/despesa quitada à vista no cadastro. Incluí escopo, critérios de aceite e validações; preservei os cards concluídos. As correções ainda não foram implementadas."
+    },
+    {
+      "id": "2026-10-07-login-empresa-unica-card-05",
+      "occurredAt": "2026-10-07T14:39:23.180Z",
+      "agent": "Claude Code",
+      "summary": "Implementei o card 05: login da empresa abre direto a Visão geral pela organização única da conta, sem seletor. Sem vínculo, suspensa ou vínculos legados múltiplos recebem bloqueio claro, sem sessão nem loop; legados só se ajustam por comando explícito. Testes, docs e ADR-028.",
+      "detailsId": "2026-10-07-login-empresa-unica-card-05-detalhes"
+    },
+    {
+      "id": "2026-10-07-vencimento-quitacao-cadastro-card-06",
+      "occurredAt": "2026-10-07T17:52:34.707Z",
+      "agent": "Claude Code",
+      "summary": "Implementei o card 06: Nova receita e Nova despesa escolhem entre pendente, com vencimento livre, e quitado à vista em um envio. Baixa integral, auditoria e idempotência na mesma transação; vencimento interno igual ao dia efetivo. Testes, docs e ADR-029.",
+      "detailsId": "2026-10-07-vencimento-quitacao-cadastro-card-06-detalhes"
+    },
+    {
+      "id": "2026-10-08-organizacao-commits-main",
+      "occurredAt": "2026-10-08T03:34:09.376Z",
+      "agent": "Codex",
+      "summary": "Organizei as alterações pendentes por assunto para envio à main, preservei os registros anteriores e corrigi trechos desatualizados do README sobre dashboard, login e quitação. Revalidei backend, frontend, formatação, tipos e build.",
+      "detailsId": "2026-10-08-organizacao-commits-main-detalhes"
+    },
+    {
+      "id": "2026-10-08-kanban-refinamento-edicao-resultado",
+      "occurredAt": "2026-10-08T03:44:22.293Z",
+      "agent": "Codex",
+      "summary": "Criei os cards 07 e 08 em A fazer no Kanban: editar/excluir receitas e despesas com integridade e auditoria; destacar resultado mensal positivo, negativo e zero. Incluí critérios de aceite e validações. Confirmei a persistência e preservei as tarefas concluídas; sem implementar as mudanças."
+    },
+    {
+      "id": "2026-10-08-cards-07-08-edicao-exclusao-resultado",
+      "occurredAt": "2026-10-08T04:18:21.149Z",
+      "agent": "Codex",
+      "summary": "Implementei os cards 07 e 08: edição e exclusão lógica de receitas/despesas, preservando baixas, auditoria, versões e reenvios; resultado mensal com verde/seta acima, vermelho/seta abaixo e zero neutro. Ajustei a interface em 320 px e documentei as regras.",
+      "detailsId": "2026-10-08-cards-07-08-edicao-exclusao-resultado-detalhes"
+    },
+    {
+      "id": "2026-10-08-kanban-planejamento-mvp-09-17",
+      "occurredAt": "2026-10-08T18:37:55.051Z",
+      "agent": "Codex",
+      "summary": "Criei nove cards detalhados 09–17 em A fazer no Kanban: correção de baixas, entrada/parcelas/lembretes, relatórios, histórico do cliente, recorrência, equipe, saldo, Pingo e segurança. Pingo exige escopo aprovado; segurança é planejamento antes do piloto.",
+      "detailsId": "2026-10-08-kanban-planejamento-mvp-09-17-detalhes"
+    },
+    {
+      "id": "2026-10-08-correcao-baixas-card-09",
+      "occurredAt": "2026-10-08T19:43:40.015Z",
+      "agent": "Claude Code",
+      "summary": "Implementei o card 09: corrigir recebimento ou pagamento por linha substituta vinculada, com motivo, revisão do antes/depois e confirmação. A baixa original fica no histórico e sai dos totais; ADMIN e OPERATOR corrigem. Lock, versão, idempotência e auditoria atômica. ADR-031.",
+      "detailsId": "2026-10-08-correcao-baixas-card-09-detalhes"
+    },
+    {
+      "id": "2026-10-08-parcelas-lembretes-card-10",
+      "occurredAt": "2026-10-08T19:43:40.016Z",
+      "agent": "Claude Code",
+      "summary": "Implementei o card 10: receitas e despesas com entrada opcional e parcelas com valor, vencimento, forma e lembrete próprios; prévia editável com soma exata; baixa por parcela; página Lembretes sem baixa automática. Centavos na última parcela e dias 29–31 no último dia do mês. ADR-032.",
+      "detailsId": "2026-10-08-parcelas-lembretes-card-10-detalhes"
+    },
+    {
+      "id": "2026-10-08-relatorios-fluxo-caixa-card-11",
+      "occurredAt": "2026-10-08T20:40:50.944Z",
+      "agent": "Claude Code",
+      "summary": "Implementei o card 11: página Relatórios com resultado mensal (igual ao dashboard, comparação de meses, vendido e despesas por vencimento, categorias em caixa), extrato do realizado e a receber/a pagar, com filtros, paginação e totais do conjunto filtrado no backend. ADR-033.",
+      "detailsId": "2026-10-08-relatorios-fluxo-caixa-card-11-detalhes"
+    },
+    {
+      "id": "2026-10-09-landing-capturas-reais",
+      "occurredAt": "2026-10-09T15:26:21.307Z",
+      "agent": "Codex",
+      "summary": "Substituí os mockups da landing por capturas reais do PingoFin: dashboard, indicadores, receitas, despesas, parcelas e relatórios. Incluí WebP, versões móveis, procedência e Pingo complementar, preservando a estrutura e as interações.",
+      "detailsId": "2026-10-09-landing-capturas-reais-detalhes"
+    },
+    {
+      "id": "2026-10-09-migracao-quatro-repositorios",
+      "occurredAt": "2026-10-09T15:40:51.612Z",
+      "agent": "Codex",
+      "summary": "Organiza o estado atual do PingoFin em quatro repositórios independentes, adapta comandos e trava de histórico e preserva as origens para conferência antes da descontinuação.",
+      "detailsId": "2026-10-09-migracao-quatro-repositorios-details"
+    }
+  ],
+  "details": [
+    {
+      "id": "2026-10-05-historico-agentes-detalhes",
+      "changeId": "2026-10-05-historico-agentes",
+      "sections": [
+        {
+          "title": "Fonte das informações",
+          "text": "O arquivo frontend/data/agent-changes.json é a fonte única do histórico. As entradas são versionadas no projeto e carregadas pelo servidor Nuxt; a persistência dos logs não usa banco de dados."
+        },
+        {
+          "title": "Acesso e apresentação",
+          "text": "A página da plataforma apresenta os resumos e abre os detalhes sob demanda. A entrega do JSON exige a autorização master confirmada pela sessão existente. Administradores de empresas e visitantes não recebem o conteúdo."
+        },
+        {
+          "title": "Obrigação dos agentes",
+          "text": "AGENTS.md e CLAUDE.md exigem uma nova entrada ao concluir qualquer alteração. O validador limita textos a 300 caracteres, verifica referências e preserva entradas anteriores. O hook de commit exige que a nova entrada esteja no stage."
+        },
+        {
+          "title": "Validação automatizada",
+          "text": "Passaram 47 testes, typecheck, lint, format:check e build. Os testes cobrem limite Unicode, vínculos dos detalhes, autorização master e commits sem registro, incluindo JSON no stage diferente da cópia de trabalho."
+        },
+        {
+          "title": "Verificação do acesso",
+          "text": "Com Nitro de produção e sessão simulada: visitante 401, ADMIN/OPERATOR 403, falha de sessão 503 e master 200. O JSON não apareceu no bundle público. A integração com contas reais do Laravel não foi exercitada nesta verificação."
+        },
+        {
+          "title": "Conferência da interface",
+          "text": "Conferi busca, detalhes por teclado, logout, bloqueio de ADMIN e temas claro/escuro. A tela se adaptou a 390 px sem rolagem horizontal. Capturas de teste estão em docs/capturas/."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-05-kanban-interno-detalhes",
+      "changeId": "2026-10-05-kanban-interno",
+      "sections": [
+        {
+          "title": "Backend",
+          "text": "Tabela internal_kanban_tasks sem organization_id e API /api/v1/internal/kanban com Form Requests e Resources. Movimentos em transação com bloqueio das linhas e posições densas; falhas revertem tudo. Flag desabilitada por padrão, allowlist vazia nega acesso e papéis de empresa não concedem acesso."
+        },
+        {
+          "title": "Frontend",
+          "text": "Página /kanban em layout interno, sem seletor de organização e fora da navegação dos clientes. Estado só na página, descartado no logout. Arrastar nativo, mais Mover para, Subir e Descer para teclado e celular; a posição anterior volta quando a API recusa."
+        },
+        {
+          "title": "Validação",
+          "text": "Testes de backend no MySQL de teste (acesso, flag, validação, persistência, rollback e CSRF) e de frontend passaram. No navegador: criar, editar, mover, reordenar, recarregar, excluir, acesso negado e flag desligada. Arrasto real com mouse não foi comprovado."
+        },
+        {
+          "title": "Registro",
+          "text": "Entrada retroativa, criada ao organizar os commits: a alteração foi feita antes de existir a regra de registro obrigatório."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-05-refinamento-visual-direcao-b-detalhes",
+      "changeId": "2026-10-05-refinamento-visual-direcao-b",
+      "sections": [
+        {
+          "title": "Escolha da direção",
+          "text": "Duas propostas renderizadas da listagem de empresas foram comparadas em desktop, mobile, claro e escuro. A direção B foi escolhida e registrada no DESIGN_SYSTEM §16, separando decisões aprovadas de ajustes experimentais. A prévia de propostas foi removida."
+        },
+        {
+          "title": "Componentes e tokens",
+          "text": "shadcn-vue new-york-v4 em components/ui, importado explicitamente e ligado aos semânticos; @lucide/vue e Manrope OFL local. Estilos globais passaram para @layer base/components, sem !important novo. Variáveis de foco, seleção, elevação, glass e movimento foram criadas."
+        },
+        {
+          "title": "Pingo flutuante",
+          "text": "Painel não modal no desktop e modal em tela cheia no mobile, com Escape, retorno de foco, aria-expanded e aria-controls. A conversa é compartilhada com /assistente, só em memória, e é limpa ao trocar de organização, sair ou mudar de identidade. Não há API, respostas ou lançamentos."
+        },
+        {
+          "title": "Acessibilidade verificada",
+          "text": "Corrigi: nome do seletor de organização (combobox), contraste do segmento escuro (2,36→9,66:1), trilha sobre o glass, rótulo da conta e navbar fixa em zoom de 200%. Verifiquei 320 px sem rolagem lateral, teclado nos menus e no filtro e foco visível."
+        },
+        {
+          "title": "Validação",
+          "text": "Typecheck, lint, format, build e 55 testes passaram, incluindo 8 novos do Pingo. No navegador conferi listagem, filtro, cadastro com erros da API, detalhe, login/logout, seleção de organização, chat e temas claro, escuro e sistema. O backend não foi alterado."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-proximos-quatro-modulos-detalhes",
+      "changeId": "2026-10-06-proximos-quatro-modulos",
+      "sections": [
+        {
+          "title": "Cards e ordem",
+          "text": "Criei os cards 5 a 8 em A fazer: 01 clientes/categorias; 02 receitas/recebimentos; 03 despesas/pagamentos; 04 dashboard básico. As descrições incluem a meta de 06/10/2026, dependências, entregáveis, critérios de aceite e registro obrigatório dos agentes."
+        },
+        {
+          "title": "Recorte de implementação",
+          "text": "Planejei uma obrigação por receita/despesa, com baixas totais ou parciais e dashboard a partir de valores reais. Parcelamento, recorrência, estorno, relatórios avançados e IA ficam para próximas etapas. Permissões de clientes devem ser documentadas antes de implementar."
+        },
+        {
+          "title": "Regras para o financeiro",
+          "text": "Os cards exigem isolamento por empresa, dinheiro exato, separação entre previsto e efetivo, transações, proteção contra dupla baixa e testes pertinentes. O dashboard não deve chamar resultado registrado de saldo disponível sem decidir saldo inicial e contas."
+        },
+        {
+          "title": "Quadro e verificação",
+          "text": "Movi o card 4 de permissões para Concluído conforme a confirmação do usuário. Após recarregar /kanban, comparei títulos, descrições e status dos quatro novos cards. Salvei a captura completa em docs/capturas/kanban-proximos-passos-2026-10-06.png."
+        },
+        {
+          "title": "Limite desta tarefa",
+          "text": "Esta tarefa organizou o trabalho no quadro existente e registrou a alteração no JSON. Os quatro módulos ainda não foram implementados. A meta de terminar hoje é um recorte de planejamento, sem garantia de prazo nem declaração de testes desses módulos."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-direcao-visual-landing-wiser-detalhes",
+      "changeId": "2026-10-06-direcao-visual-landing-wiser",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O usuário pediu um Markdown no projeto irmão pingolandingpage. Consultei a landing Wiser e os documentos e assets do PingoFin para adaptar a estrutura da referência à direção B já existente."
+        },
+        {
+          "title": "Direção e comportamento",
+          "text": "O guia propõe hero com Pingo 2D, capítulos claros/escuros, wordmark adaptativo, cards e trilhos responsivos, demonstração por abas e briefing de vídeos. Copy financeira, IA e planos distinguem o estágio atual de capacidades planejadas."
+        },
+        {
+          "title": "Validação",
+          "text": "Inspecionei trechos desktop e logo claro/escuro. Consultei CSS/JavaScript públicos para mobile e sliders. Formatei o Markdown com Prettier e conferi UTF-8 e oito links locais. A landing e os vídeos não foram implementados."
+        },
+        {
+          "title": "Limitações",
+          "text": "O navegador deixou de responder ao mudar para 390 × 844. Não concluí inspeção visual mobile nem testes de swipe, setas, abas e FAQ. O documento identifica esses limites e separa recomendações dos comportamentos observados."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-pingo-3d-acenando-v1-detalhes",
+      "changeId": "2026-10-06-pingo-3d-acenando-v1",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O usuário pediu um Pingo 3D com acabamento de mascote premium, inspirado na apresentação da Wiser. Usei como referências o PNG normal e a prancha oficial, mantendo gota roxa, ponta amarela, rosto e anatomia."
+        },
+        {
+          "title": "Asset e prompt",
+          "text": "Geração pela ferramenta integrada image_gen, fundo transparente solicitado. Asset: pingolandingpage/assets/pingo/pingo-3d-acenando-v1.png. O prompt aplicado está no arquivo .prompt.txt correspondente. Pose escolhida: sorriso acolhedor, aceno e nenhum acessório."
+        },
+        {
+          "title": "Validação",
+          "text": "Inspecionei a imagem gerada. Confirmei 1254 × 1254 px, formato ARGB e alfa zero nos quatro cantos. A cópia possui SHA256 idêntico ao original. Nas bordas, 54 amostras têm alfa 1; nenhuma supera 1, sem conteúdo opaco encostando no enquadramento."
+        },
+        {
+          "title": "Limitações",
+          "text": "É uma primeira proposta 3D para revisão visual, sem aprovação definitiva de marca. Não produzi outras expressões, logo ou vídeo, nem substituí assets 2D ou alterei a interface. A Wiser foi referência de acabamento no prompt, sem imagem dela como entrada."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-simbolo-v1-favicon-navbar-detalhes",
+      "changeId": "2026-10-06-simbolo-v1-favicon-navbar",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O usuário escolheu a primeira proposta e pediu favicon, versão compacta de navbar e organização no CRM e em pingolandingpage. Preservei exatamente o PNG aprovado, sem regenerar, recolorir ou trocar o mascote original."
+        },
+        {
+          "title": "Assets e uso",
+          "text": "Fontes em docs/assets/brand no CRM e assets/brand na landing. Cada public/brand recebe navbar 128/256 px e favicon 16/32/48/256; public/favicon.ico oferece a descoberta padrão do navegador. Guia e script explicam integração e reexportação."
+        },
+        {
+          "title": "Validação",
+          "text": "Conferi SHA256 do mestre e igualdade das cópias entre projetos, dimensões ARGB, cantos transparentes e os quatro frames ICO idênticos aos PNGs. Inspecionei prévias de 128 e 32 px. Documentação formatada com Prettier."
+        },
+        {
+          "title": "Limitações",
+          "text": "É raster, com os preenchimentos da versão escolhida; paleta exata e vetorização permanecem pendentes. Não alterei componentes de navbar, código da landing, backend ou dados financeiros. O pacote está pronto para uso; a aplicação em cada navbar será uma etapa própria."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-pingo-3d-oito-poses-detalhes",
+      "changeId": "2026-10-06-pingo-3d-oito-poses",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O usuário pediu concluir todas as oito poses antes da entrega e continuar organizando os arquivos na landing page. Usei a versão 3D Acenando existente como referência em cada geração, preservando os dois PNGs anteriores."
+        },
+        {
+          "title": "Geração e organização",
+          "text": "Foram oito chamadas individuais de image_gen, com fundo transparente solicitado. Salvei cada PNG e seu prompt exato em pingolandingpage/assets/pingo, mais README e manifesto com as dez poses, referências, dimensões e hashes."
+        },
+        {
+          "title": "Conferência visual",
+          "text": "Inspecionei cada imagem gerada: mão no queixo, lupa, lâmpada, calendário sem texto, duas pastas, palma aberta, gesto discreto de comemoração e postura sentada. As poses mantêm o Pingo roxo com ponta amarela e acabamento 3D da referência."
+        },
+        {
+          "title": "Validação de arquivos",
+          "text": "Os dez PNGs são ARGB de 1254 × 1254 px, com prompts correspondentes. As oito novas cópias têm SHA256 idêntico à origem. Os cantos têm alfa zero, exceto um canto de Analisando com alfa 1/255. Os PNGs foram preservados sem pós-processamento."
+        },
+        {
+          "title": "Limites",
+          "text": "Esta entrega cria assets e documentação de catálogo, sem aplicar imagens no site, gerar vídeos ou substituir o Pingo 2D do sistema financeiro. A coleção é uma proposta visual; não confirma operações financeiras nem representa aprovação definitiva da marca."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-landing-vue-primeiro-prototipo-detalhes",
+      "changeId": "2026-10-06-landing-vue-primeiro-prototipo",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Li DIRECAO_VISUAL_LANDING_PAGE.md no projeto irmão e consultei a Wiser. O pedido atual autoriza Pingo 3D na landing; preservei o guia anterior, a aplicação financeira e o PNG original. Não copiei assets da Wiser."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Landing Vue/Vite independente, com shadcn-vue/Reka UI, Manrope local e Anime.js. Header adaptativo, menu mobile, capítulos claros/escuros, trilhos, abas e FAQ. Pausa global e preferência de movimento reduzido; sem API de IA ou dados financeiros."
+        },
+        {
+          "title": "Assets e documentação",
+          "text": "Usei a primeira imagem 3D existente; os demais espaços têm fundos azuis e identificação de prévia. Catálogo único em src/config/media.ts, guia de substituição, README, AGENTS e capturas em pingolandingpage. Nenhum log privado foi copiado ao site."
+        },
+        {
+          "title": "Validação",
+          "text": "Build com TypeScript e format:check passaram; HTTP 200. Conferi desktop, 390 e 320 px, header, menu/Escape, abas, FAQ por Enter, trilho por botão/seta e pausa/retomada. Sem erros capturados no navegador. A cópia web do Pingo é idêntica ao original."
+        },
+        {
+          "title": "Limitações",
+          "text": "Protótipo local em localhost:5174, sem publicação. Prints, ilustrações finais, vídeos e destino comercial aguardam definição. Não testei aparelho físico ou toque real nem alterei a preferência de movimento do sistema; revisei essa regra no código."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-landing-sites-preparacao-detalhes",
+      "changeId": "2026-10-06-landing-sites-preparacao",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O usuário pediu deploy provisório pelo ChatGPT para compartilhar. Cadastrei um único Site e preservei seu ID em pingolandingpage/.openai/hosting.json. A prévia usa a landing existente, sem publicar o sistema financeiro."
+        },
+        {
+          "title": "Configuração",
+          "text": "Manifesto estático aponta para dist. README e AGENTS registram a publicação solicitada e a reutilização do Site. O código e os assets atuais serão salvos no repositório de origem do Sites; o arquivo privado de logs permanece no projeto financeiro."
+        },
+        {
+          "title": "Validação",
+          "text": "TypeScript e build Vite passaram; formatação verificada. O helper de build do Sites falhou ao localizar o npm no Windows; a compilação pelo npm-cli do Node portátil existente passou. Nenhuma dependência foi trocada para contornar a falha."
+        },
+        {
+          "title": "Estado",
+          "text": "Preparação concluída, ainda sem declaração de deploy bem-sucedido. O acesso público pelo link será configurado para cumprir o pedido de compartilhamento; a publicação será confirmada pelo status retornado pelo Sites."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-landing-sites-publicacao-detalhes",
+      "changeId": "2026-10-06-landing-sites-publicacao",
+      "sections": [
+        {
+          "title": "Publicação",
+          "text": "Site appgprj_6ac54fde806c8191bd80a0774277bea3, versão 1. URL: https://pingofin-previa.gabriellawliet23.chatgpt.site. O Sites retornou succeeded e o acesso público foi confirmado pela política de acesso."
+        },
+        {
+          "title": "Código e pacote",
+          "text": "O helper oficial salvou e enviou o código do projeto irmão. SHA: fa216c39b9cc94745c7a505e4aaf25611c61acd9. Pacote de 19 arquivos e 2.232.320 bytes, correspondente ao build validado. Credenciais foram passadas apenas por stdin, sem persistência."
+        },
+        {
+          "title": "Compatibilidade Windows",
+          "text": "O tar interpretou o caminho C: como destino remoto na primeira tentativa. Repeti o helper com TAR_OPTIONS=--force-local apenas no processo; o empacotamento passou. Não alterei os helpers, o código da interface ou proteções para resolver a falha."
+        },
+        {
+          "title": "Limites",
+          "text": "A publicação compartilha uma prévia visual, com prints e parte das ilustrações ainda provisórios. Não publicou a aplicação financeira, o banco ou o JSON privado de agentes. Não foram configurados planos, domínio próprio ou integrações de IA."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-clientes-categorias-receitas-recebimentos-detalhes",
+      "changeId": "2026-10-06-clientes-categorias-receitas-recebimentos",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O card 01 estava em A fazer e não havia migrations, models, API nem telas de clientes ou categorias. Por escolha do usuário, implementei o 01 conforme o card (ADMIN mantém, OPERATOR consulta; registrado no ADR-027) e depois o 02 sobre ele."
+        },
+        {
+          "title": "Backend",
+          "text": "Migrations com FKs compostas por organização e restritivas; Policies por capacidade; Money com bcmath e limite 999999999.99; baixa com lockForUpdate; Idempotency-Key gravada na mesma transação; audit_logs atômico. Endpoints customers, categories, revenues e receivables/{id}/receipts."
+        },
+        {
+          "title": "Frontend",
+          "text": "Telas /clientes, /categorias, /receitas, /receitas/nova e /receitas/{id} na seção Financeiro. Serviço no cliente HTTP central com Idempotency-Key, escopo de requisições por empresa abortado ao trocar ou sair, centavos BigInt e datas pelo fuso da organização."
+        },
+        {
+          "title": "Validação",
+          "text": "Backend: 77 testes (740 asserções), incluindo concorrência com segunda conexão MySQL, e Pint. Frontend: typecheck, lint, format:check, 86 testes e build. No navegador: R$ 1.000 com baixa de R$ 400, recarga com 1.000/400/600, 700 recusado, retry sem duplicar e empresa B sem acesso."
+        },
+        {
+          "title": "Limites",
+          "text": "Sem parcelas, entrada na criação, cancelamento/estorno, edição após baixa, despesas, dashboard e IA. TTL das chaves de idempotência é TBD; recebimento retroativo exige data e hora. A empresa escolhida não persiste ao recarregar. Cards 01 e 02 movidos para Concluído no Kanban."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-revisao-versionamento-tarefas-01-02-detalhes",
+      "changeId": "2026-10-06-revisao-versionamento-tarefas-01-02",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Após fetch, main e origin/main estavam em a8ef814; o código das tarefas 01/02 ainda era trabalho local. O histórico do Claude registra clientes/categorias e receitas/recebimentos concluídos. Também havia assets e registros anteriores pendentes."
+        },
+        {
+          "title": "Comportamento e organização",
+          "text": "Declarei ext-bcmath no Composer e documentei o requisito. O lock mudou apenas no hash e na plataforma. A organização separa registros/planejamento, marca/favicon e financeiro. O hook do histórico permanece habilitado; segredos e builds ficam fora do Git."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram 77 testes backend (740 asserções), 86 frontend, typecheck, lint, format:check, build, Pint, Composer validate e requisitos de plataforma. Conferi escopo, migrations, isolamento, idempotência e transações. Nenhuma versão de pacote foi atualizada."
+        },
+        {
+          "title": "Limitações",
+          "text": "Esta revisão não repetiu os fluxos no navegador registrados pelo Claude. Testes usam MySQL descartável dedicado. Não há deploy ou novos módulos. Parcelas, cancelamento, despesas, dashboard, IA e TTL de idempotência continuam fora da entrega."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-acesso-master-kanban-detalhes",
+      "changeId": "2026-10-06-acesso-master-kanban",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O Kanban estava habilitado no ambiente local, mas sua regra ainda usava a allowlist de e-mails e não reconhecia master. A documentação previa substituir essa regra quando a autorização de plataforma existisse."
+        },
+        {
+          "title": "Comportamento",
+          "text": "A API consulta platform_administrators em cada operação, inclusive após revogação. ADMIN/OPERATOR e a antiga allowlist não concedem acesso. A página usa middleware platform e links da área master; a flag permanece desabilitada por padrão. Atualizei README, guia e exemplo de ambiente."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram 15 testes Kanban com MySQL (128 asserções), Pint, 86 testes frontend, typecheck, lint, format:check e build. A regra autorizou as 3 contas master existentes. No navegador, visitante foi redirecionado de /kanban ao login da plataforma."
+        },
+        {
+          "title": "Limitações",
+          "text": "A sessão master pessoal não estava disponível no navegador conectado; o acesso master foi provado pelos testes e pela regra aplicada aos registros locais. Não alterei tarefas, contas, permissões financeiras ou segredos. Correção local, sem commit ou push nesta tarefa."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-despesas-pagamentos-card-03-detalhes",
+      "changeId": "2026-10-06-despesas-pagamentos-card-03",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Cards 01/02 estavam concluídos. O usuário autorizou executar o card 03, com uma obrigação por despesa e pagamentos explícitos. Reutilizei os contratos monetários, datas, Policies, sessão e idempotência existentes."
+        },
+        {
+          "title": "Backend",
+          "text": "Criei expenses/payables/payments com FKs compostas e restritivas. ADMIN/OPERATOR criam e pagam; master permanece sem acesso financeiro. Actions usam transação, lock da obrigação, saldo exato, chave idempotente e auditoria financeira atômica."
+        },
+        {
+          "title": "Frontend",
+          "text": "Telas /despesas, /despesas/nova e /despesas/{id}, histórico de pagamentos, busca/paginação, situação e período inclusivo por vencimento. Troca de empresa ou registro descarta dados e rascunhos. Tokens/shadcn existentes, foco de teclado e ajuste dos filtros em 320 px."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram 93 testes backend (969 asserções), Pint, 88 testes frontend, typecheck, lint, format:check e build. Duas conexões MySQL verificam lock, chave repetida e recálculo com pagamento concorrente; auditoria com falha provoca rollback."
+        },
+        {
+          "title": "Conferência visual",
+          "text": "Conta e empresas sintéticas locais: despesa 300, pagamento 100 em dinheiro, restante 200 após reload; 201 bloqueado; empresa B recebe registro não encontrado. Conferi claro/escuro, 390/320 px, teclado e menu com Escape. Capturas em docs/capturas/despesas."
+        },
+        {
+          "title": "Documentação e operação",
+          "text": "Atualizei README e AGENTS e criei docs/EXPENSE_VALIDATION.md. Migration aditiva aplicada no desenvolvimento. Preservei alterações preexistentes do Kanban. O histórico de agentes continua exclusivamente no JSON protegido; auditoria financeira segue separada."
+        },
+        {
+          "title": "Limitações",
+          "text": "Sem parcelas, recorrência, fornecedores, anexos, edição, cancelamento, estorno, dashboard ou IA. Período filtra vencimentos, não saídas por data da baixa. TTL de idempotência permanece aberto. Sem commit, push ou deploy; DEP0155 transitivo conhecido no build."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-dashboard-card-04-detalhes",
+      "changeId": "2026-10-06-dashboard-card-04",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Cards 02 e 03 concluídos. O usuário autorizou implementar o card 04, dashboard básico com números reais. A página inicial passa a consultar as baixas e obrigações existentes, sem criar lançamentos."
+        },
+        {
+          "title": "Cálculos e período",
+          "text": "GET /api/v1/dashboard agrega entradas/saídas por mês local da baixa, resultado e restantes gerais, incluindo atrasos. DECIMAL/bcmath; baixas pré-agregadas por obrigação evitam duplicação. Limites UTC diários respeitam mudanças de offset."
+        },
+        {
+          "title": "Acesso e consistência",
+          "text": "Policy por capacidade para ADMIN/OPERATOR, sessão e contexto autorizado. Master sem acesso financeiro. Cinco consultas em uma transação REPEATABLE READ, sem mudar o padrão da sessão; sem cache. Atrasos e próximos 30 dias têm listas limitadas e contagem total."
+        },
+        {
+          "title": "Interface",
+          "text": "Visão geral com cinco indicadores, mês anterior/próximo/atual, atualização manual, gráfico SVG responsivo e tabela acessível, vencimentos com links. Loading, vazio, erro/retry. Trocar mês/empresa descarta dados antigos. Shell, tokens e shadcn existentes."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram 102 testes backend (1128 asserções), Pint, 96 testes frontend, typecheck e lint. Segunda conexão MySQL prova snapshot durante pagamento concorrente. Cobertura de limites de mês, microssegundos, fuso/horário de verão, valores exatos, isolamento e erro HTTP."
+        },
+        {
+          "title": "Conferência visual",
+          "text": "Conta e empresas sintéticas locais: 400/100/300/600/200 após reload; setembro sem baixas conserva pendências; B zerada sem dados de A. Claro/escuro, 390/320 px, navegação e tabela por teclado. Capturas em docs/capturas/dashboard. Tema e viewport restaurados."
+        },
+        {
+          "title": "Documentação e limites",
+          "text": "Atualizei README/AGENTS e criei docs/DASHBOARD_VALIDATION.md. Sem migrations, dependências novas, saldo bancário, relatórios avançados, exportação ou IA. Atualização manual; organização não persiste no navegador. Sem commit, push ou deploy. Histórico privado continua em JSON."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-07-login-empresa-unica-card-05-detalhes",
+      "changeId": "2026-10-07-login-empresa-unica-card-05",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Card 05 do Kanban: o cliente escolhia a organização mesmo tendo uma só. Regra pedida: cada e-mail de cliente pertence a uma única empresa, sem escolher silenciosamente a primeira em vínculos legados e preservando master, ADMIN e OPERATOR."
+        },
+        {
+          "title": "Backend",
+          "text": "CompanyMembership resolve o vínculo único. Login recusa sem vínculo, suspensa ou múltiplos (403 ORGANIZATION_*) antes de criar sessão. ResolveOrganization abre a empresa da conta; X-Organization-Id ficou opcional e, se diferente, dá 404. /auth/me informa access e organization."
+        },
+        {
+          "title": "Legados e fixtures",
+          "text": "Comando platform:legacy-memberships lista contas com mais de uma empresa e, com --email/--keep e confirmação, remove só os vínculos excedentes. Painel da plataforma marca essas pessoas. Seeder: dev@ fica só em A; B passa para operador@. Constraint única no banco fica para depois."
+        },
+        {
+          "title": "Frontend",
+          "text": "Middleware auth abre o contexto no login, reload e links internos; seletor e tela de escolha removidos, nome da empresa só como informação. /acesso-indisponivel mostra o motivo, Tentar novamente e Sair, sem loop. Master em /login vai para /plataforma. Diagnóstico usa middleware session."
+        },
+        {
+          "title": "Validação",
+          "text": "Backend 114 testes (12 novos; 7 antigos ajustados de 404/422 para o novo contrato) e Pint. Frontend typecheck, lint, format, 98 testes e build. Navegador: login direto, reload, link interno, suspensão, reativação, revogação, sem vínculo, legado, logout e 320px claro/escuro."
+        },
+        {
+          "title": "Limites",
+          "text": "Sem capturas de tela; interação por script de página. Redirecionamento do master em /login validado só por teste de API. Contas de teste removidas ao final; o seeder foi reexecutado no pingofin_dev. Recuperação de senha e constraint única no banco seguem pendentes."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-07-vencimento-quitacao-cadastro-card-06-detalhes",
+      "changeId": "2026-10-07-vencimento-quitacao-cadastro-card-06",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Card 06 do Kanban: o vencimento parecia preso à data da venda e lançamentos já quitados exigiam salvar e registrar a baixa em outro passo. Sem parcelas, recorrência ou estorno nesta tarefa."
+        },
+        {
+          "title": "Contrato",
+          "text": "POST revenues/expenses aceitam settlement opcional {method, received_at|paid_at}. Com ele, due_date e expected_method são recusados e o servidor define o vencimento como o dia civil do instante efetivo, com a forma efetiva. Sem ele, seguem obrigatórios. Valor sempre total."
+        },
+        {
+          "title": "Integridade",
+          "text": "CreateRevenue/CreateExpense chamam RegisterReceipt/RegisterPayment dentro da transação da Idempotency-Key: lock, saldo e auditoria reutilizados. Falha desfaz tudo; reenvio não duplica; mesma chave com outra quitação dá 409. Criar quitado exige a capacidade de baixa."
+        },
+        {
+          "title": "Interface",
+          "text": "Controle explícito Ainda vou receber/pagar ou Já recebi/paguei à vista. Pendente: vencimento sugerido pela venda só até ser editado. Quitado: forma e data/hora efetivas sugeridas e editáveis. Avisos de sucesso só após a API; layout corrigido a 320px."
+        },
+        {
+          "title": "Validação",
+          "text": "Backend 122 testes (8 novos) e Pint; frontend typecheck, lint, format, testes e build. Navegador: pendente 07/10→20/10, quitações de R$ 300 via Pix, duplo clique, baixa parcial posterior, reload, dashboard, teclado e 320px claro/escuro. Dados de teste removidos."
+        },
+        {
+          "title": "Limites",
+          "text": "A seta do AppSegmented move o foco sem selecionar (Espaço seleciona); componente compartilhado não alterado. Parte do preenchimento foi por script; fluxos decisivos repetidos com digitação real. Sem parcelas, recorrência, estorno ou edição de baixas."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-organizacao-commits-main-detalhes",
+      "changeId": "2026-10-08-organizacao-commits-main",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O usuário pediu organizar os commits e enviar à main. As alterações locais abrangiam Kanban master, login na empresa única, despesas, quitação no cadastro e dashboard real."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Separação por assunto com histórico obrigatório em cada commit. Arquivos compartilhados são divididos no índice Git, preservando o conteúdo final da cópia de trabalho. README corrigido para refletir o estado implementado."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram 122 testes backend (1.339 asserções), Pint, 98 testes frontend, typecheck, lint, format:check e build Nuxt. Vitest e build repetidos com permissão ampliada após bloqueios EPERM do ambiente restrito."
+        },
+        {
+          "title": "Limitações",
+          "text": "Sem nova conferência visual, alterações de contas, migrations no banco de desenvolvimento ou deploy. O build ainda emite DEP0155 transitivo e aviso de desempenho. Testes de backend usam apenas pingofin_test."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-cards-07-08-edicao-exclusao-resultado-detalhes",
+      "changeId": "2026-10-08-cards-07-08-edicao-exclusao-resultado",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Cards 07 e 08 do Kanban local refinam os módulos financeiros existentes: corrigir cadastros sem apagar histórico e tornar o sinal do resultado mensal evidente. Não foi adicionada integração de IA."
+        },
+        {
+          "title": "Comportamento financeiro",
+          "text": "PATCH/DELETE por empresa com versão esperada e idempotência. Lock de obrigação e cadastro, auditoria antes/depois e rollback atômico. Total não fica abaixo das baixas. Exclusão lógica só sem baixas; as pendências deixam de incluir o cadastro excluído."
+        },
+        {
+          "title": "Interface",
+          "text": "Ações nas listas e detalhes, formulário preenchido, busca de cliente/categoria, erros e confirmação cancelável. Conflito exige recarga explícita do rascunho. Resultado positivo/negativo usa texto, cor e seta; zero é neutro. Ajustados formulário, cabeçalho e filtros em 320 px."
+        },
+        {
+          "title": "Validação automatizada",
+          "text": "Passaram 132 testes PHP (1.567 assertions), incluindo concorrência MySQL, auditoria/rollback, autorização e reenvio; 103 testes frontend, typecheck, lint, format:check e build. Migração aditiva aplicada no banco de desenvolvimento."
+        },
+        {
+          "title": "Conferência visual",
+          "text": "Login normal com empresa e dados sintéticos. Conferidos edição de receita/despesa, cancelamento, exclusão pendente, bloqueio com baixa, atualização de pendências, teclado, temas e 320 px. API real exibiu positivos, negativos, zero e resultados de ±0,01."
+        },
+        {
+          "title": "Limitações",
+          "text": "Sem estorno, edição de baixas ou restauração pela interface. Registros com qualquer baixa não podem ser excluídos. Correção do cadastro não devolve dinheiro. Outra aba exige Atualizar. Não foi executada sessão com leitor de tela dedicado nem simulação visual de falha de rede."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-kanban-planejamento-mvp-09-17-detalhes",
+      "changeId": "2026-10-08-kanban-planejamento-mvp-09-17",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O usuário pediu um card detalhado para cada pendência do MVP, incluindo entrada e lembretes para parcelas, contas mensais recorrentes e uma etapa de planejamento de segurança/privacidade antes de dados reais."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Cards 09–17 (IDs 13–21) incluem objetivo, escopo, aceite, validação e limites. Parcelas/recorrência têm lembretes internos sem baixa automática. Pingo proíbe implementação sem escopo aprovado; segurança pede planejar e discutir antes de executar."
+        },
+        {
+          "title": "Validação",
+          "text": "KanbanAccess confirmou flag habilitada e autorização master. KanbanBoard criou os nove cards em transação no pingofin_dev. Descrições relidas integralmente, status TODO e posições 0–8 conferidos; snapshots dos cards anteriores permaneceram iguais."
+        },
+        {
+          "title": "Limitações",
+          "text": "Cadastro feito pelo serviço Laravel local; navegador não respondeu à tentativa de inspeção. Não foram implementados módulos, IA ou infraestrutura. Scripts temporários são removidos; nenhuma conta, dado financeiro ou card anterior foi alterado."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-correcao-baixas-card-09-detalhes",
+      "changeId": "2026-10-08-correcao-baixas-card-09",
+      "sections": [
+        {
+          "title": "Regras aprovadas",
+          "text": "Definidas com o usuário em 08/10/2026: correção vinculada para erro de digitação (valor, data/hora ou forma), não devolução; ADMIN e OPERATOR corrigem com motivo. Caixa e dashboard refletem o valor certo no período certo."
+        },
+        {
+          "title": "Backend",
+          "text": "Colunas corrects_id, correction_reason e superseded_at; CorrectSettlement trava obrigação, lançamento e baixa, confere a versão e o saldo da parcela. Rotas /receipts/{id}/corrections e /payments/{id}/corrections. Somas usam só baixas vigentes."
+        },
+        {
+          "title": "Interface",
+          "text": "Histórico mostra Vigente, Corrigido e Correção vigente com motivo. Diálogo com edição, revisão do efeito (ex.: menos R$ 100 recebido) e confirmação; cancelar não altera nada; conflito pede recarga."
+        },
+        {
+          "title": "Validação",
+          "text": "7 testes de API (aceite 500→400, mês, idempotência, conflitos, validação, isolamento, rollback, pagamentos). Navegador como OPERATOR: revisão, cancelar sem efeito, confirmar, histórico e dashboard conferidos no banco."
+        },
+        {
+          "title": "Limites",
+          "text": "Estorno/devolução real e exclusão de lançamentos com baixas continuam indisponíveis. No painel de testes o fim da animação de diálogos não ocorre (sem quadros); validado com recarga entre passos."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-parcelas-lembretes-card-10-detalhes",
+      "changeId": "2026-10-08-parcelas-lembretes-card-10",
+      "sections": [
+        {
+          "title": "Regras aprovadas",
+          "text": "Usuário decidiu em 08/10/2026: centavos excedentes na última parcela; parcelas que começam nos dias 29 a 31 usam o último dia dos meses curtos e voltam ao dia original. Só a entrada pode nascer baixada, e só se marcada explicitamente."
+        },
+        {
+          "title": "Backend",
+          "text": "installments (2 a 60 linhas) validado no servidor; WriteSchedule grava obrigações e a baixa da entrada na transação idempotente. Consultas agregam por parcela; payables ganhou sequence. GET /reminders lista lembretes do dia local e dos próximos 7 dias."
+        },
+        {
+          "title": "Interface",
+          "text": "Modo Parcelado com gerador e prévia editável (soma confere ou mostra a diferença); tabela de parcelas no detalhe com Registrar e seletor no formulário; página Lembretes com Revisar e registrar; edição de parcelado preserva total e cronograma."
+        },
+        {
+          "title": "Validação",
+          "text": "Backend 150 testes (11 novos de parcelas) e frontend 109 testes, typecheck, lint, format e build. Navegador: aceite 1.200 com entrada 400 e 4×200, parcial limitada à parcela, lembretes, dashboard, 320px claro/escuro. Dados de teste removidos."
+        },
+        {
+          "title": "Limites",
+          "text": "Sem edição do cronograma salvo, recorrência, WhatsApp/e-mail/push ou débito automático. Lançamentos antigos viram cronogramas de uma parcela sem mudança de valores."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-relatorios-fluxo-caixa-card-11-detalhes",
+      "changeId": "2026-10-08-relatorios-fluxo-caixa-card-11",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Card 11 do Kanban. A base por categoria estava em aberto: adotei caixa, com vendido (data da venda) e despesas (vencimento) rotulados à parte. Limites: 12 meses no mensal, 366 dias nos períodos, 100 linhas por página. Escolhas do agente, revisáveis."
+        },
+        {
+          "title": "Backend",
+          "text": "GET /reports/monthly, /statement e /obligations com capacidade report.view (ADMIN/OPERATOR). Queries em app/Queries/Reports, sem dependência da requisição; linhas e totais na mesma leitura REPEATABLE READ, somas DECIMAL e baixas agregadas por parcela."
+        },
+        {
+          "title": "Interface",
+          "text": "/relatorios com três visões por link (?visao=), filtros de período, tipo, categoria, forma e situação, base/fuso/consulta sempre visíveis, vazio sem cadastro × período sem movimento, erro com nova tentativa e link do lançamento na parcela."
+        },
+        {
+          "title": "Validação",
+          "text": "Backend 158 testes (8 novos) e Pint; frontend typecheck, lint, format, build e 116 testes. Navegador como OPERATOR: mês igual ao dashboard, correção fora dos totais, previsto igual a a receber/a pagar, 320px claro/escuro sem rolagem. Dados temporários removidos."
+        },
+        {
+          "title": "Limitações",
+          "text": "Sem CSV, BI, gráfico mensal ou recorrência. Seletor de categorias carrega até 100. Erro de leitura não provocado no navegador. Não é saldo bancário: mostra só o que foi registrado."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-landing-capturas-reais-detalhes",
+      "changeId": "2026-10-09-landing-capturas-reais",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Landing Vue em pingolandingpage, com Wiser como referência de apresentação. Capturas reais no navegador sobre Nuxt/Laravel, com clientes e lançamentos sintéticos em empresa temporária. Não houve geração de imagens nem recriação de interfaces."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Hero usa visão geral escura e recorte nativo de resultado; benefícios usam indicadores; jornada usa parcelas; trilho e cinco abas mostram telas reais. WebP e picture com variantes móveis. Sombras e perspectiva em CSS; fallback não inventa dashboard."
+        },
+        {
+          "title": "Validação",
+          "text": "Typecheck, formatação e build passaram. Navegador em 1440/768/390/320 px: imagens carregadas, sem overflow ou erros de console; abas por teclado e menu com Escape. Fixtures removidas após verificar IDs e quantidades. JSON validado com --worktree."
+        },
+        {
+          "title": "Limitações",
+          "text": "Capturas estáticas de outubro/2026, não integração ao produto ao vivo. Pingo 3D existente preservado; IA e oferta comercial continuam pendentes. Fontes e manifesto na landing; evidências no projeto financeiro. Nenhum dado real de clientes foi publicado."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-migracao-quatro-repositorios-details",
+      "changeId": "2026-10-09-migracao-quatro-repositorios",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Migração solicitada para E:\\Projects\\PingoFin, com frontend, backend, landing e documentação já conectados aos respectivos GitHubs. Inclui alterações de trabalho ainda não commitadas nas origens."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Cada aplicação passa a ocupar a raiz do seu repositório. Documentação centralizada, comandos locais independentes, histórico privado único no frontend e referências versionadas nos outros commits."
+        },
+        {
+          "title": "Validação",
+          "text": "Inventário sem perdas. Frontend: typecheck, lint, format, 120 testes e 8 checks dirigidos; build e HTTP privado passaram. Landing: typecheck, format e build. Backend: Composer, Pint e 158 testes (2.096 assertions) passaram."
+        },
+        {
+          "title": "Limitações",
+          "text": "Sem push, deploy ou exclusão das origens. Dependências do frontend têm 14 avisos (8 high, 6 critical), incluindo propagação transitiva. Antes de produção, revisar dependências, domínios, cookies, backups e operação no host."
+        },
+        {
+          "title": "Preservação",
+          "text": "Código de domínio, componentes, migrações, lockfiles, PNGs, SVGs e capturas foram preservados. Ambientes locais e runtimes ficam ignorados; banco de desenvolvimento e volumes foram mantidos. Sem nova inspeção visual de UI nesta migração."
+        }
+      ]
+    }
+  ]
+}
