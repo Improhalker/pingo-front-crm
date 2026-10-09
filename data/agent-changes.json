@@ -200,6 +200,13 @@
       "agent": "Codex",
       "summary": "Organiza o estado atual do PingoFin em quatro repositórios independentes, adapta comandos e trava de histórico e preserva as origens para conferência antes da descontinuação.",
       "detailsId": "2026-10-09-migracao-quatro-repositorios-details"
+    },
+    {
+      "id": "2026-10-09-validacao-publicacao-github",
+      "occurredAt": "2026-10-09T17:52:54.979Z",
+      "agent": "Codex",
+      "summary": "Configurei CI independente nos quatro repositórios e validei frontend, landing, API Laravel, MySQL e Redis na nova estrutura, incluindo cadastro pelo navegador e proteção do histórico master.",
+      "detailsId": "2026-10-09-validacao-publicacao-github-details"
     }
   ],
   "details": [
@@ -864,6 +871,32 @@
         {
           "title": "Preservação",
           "text": "Código de domínio, componentes, migrações, lockfiles, PNGs, SVGs e capturas foram preservados. Ambientes locais e runtimes ficam ignorados; banco de desenvolvimento e volumes foram mantidos. Sem nova inspeção visual de UI nesta migração."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-validacao-publicacao-github-details",
+      "changeId": "2026-10-09-validacao-publicacao-github",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Publicação autorizada somente nos quatro repositórios GitHub. Hospedagem e DNS serão definidos depois. A nova estrutura fica em E:\\Projects\\PingoFin."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Workflows próprios com Actions por SHA e permissões de leitura. Frontend conserva servidor Nitro e histórico privado; backend testa somente pingofin_test; landing gera dist. Nenhuma credencial real entra no Git."
+        },
+        {
+          "title": "Validação",
+          "text": "Frontend: 121 testes, typecheck, lint, formato, build e HTTP privado. Backend: 158 testes, 2.096 assertions, Composer/Pint. Landing: tipos, formato e build. Navegador/HTTP com Laravel/MySQL reais; Docker healthy e worker Redis processou o job."
+        },
+        {
+          "title": "Integração",
+          "text": "CSRF ausente: 419; visitante: 401; histórico de ADMIN: 403, master: 200. Empresa alheia: 404, master sem acesso financeiro: 403. Baixa idempotente e excedente rejeitado. UI cadastrou cliente persistido; desktop/mobile 320px e tema escuro conferidos."
+        },
+        {
+          "title": "Limitações",
+          "text": "Sem hospedagem pública ou DNS. Frontend mantém 14 avisos npm (8 high, 6 critical); revisão necessária antes da produção. Landing e Composer sem avisos na auditoria executada. Duas empresas/quatro contas de teste removidas; origens e volumes preservados."
         }
       ]
     }
