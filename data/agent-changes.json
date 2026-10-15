@@ -214,6 +214,20 @@
       "agent": "Codex",
       "summary": "Configurei e publiquei somente a landing PingoFin na Vercel, conectada ao GitHub pingo-landingpage, com Vite/Node 24, build estático e acesso público pelo domínio vercel.app.",
       "detailsId": "2026-10-09-landing-vercel-details"
+    },
+    {
+      "id": "2026-10-15-pausa-nfse",
+      "occurredAt": "2026-10-15T17:51:18.768Z",
+      "agent": "Codex",
+      "summary": "Registrei a pausa da NFS-e e a prioridade de revisar o MVP financeiro e o Kanban antes da IA. Main preservada; não foi encontrada implementação fiscal para remover.",
+      "detailsId": "2026-10-15-pausa-nfse-details"
+    },
+    {
+      "id": "2026-10-15-arquivo-plano-nfse",
+      "occurredAt": "2026-10-15T17:51:18.768Z",
+      "agent": "Codex",
+      "summary": "Separei o planejamento fiscal na branch paused/nfse da documentação e criei referências de retomada nos repositórios de frontend e backend, sem implementar código fiscal.",
+      "detailsId": "2026-10-15-arquivo-plano-nfse-details"
     }
   ],
   "details": [
@@ -930,6 +944,50 @@
         {
           "title": "Limitações",
           "text": "Sem domínio personalizado ou DNS. Fonte/cadastro do Site anterior preservados. Capturas de verificação ficam locais e ignoradas. Nenhum segredo, sessão, dado financeiro real ou histórico privado integra o site público."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-pausa-nfse-details",
+      "changeId": "2026-10-15-pausa-nfse",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Usuário pediu pausar a NFS-e por falta de tempo, preservar o contexto e voltar ao foco no sistema financeiro. Nos repositórios canônicos não foram encontrados código, telas ou migrations fiscais."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Aviso persistente em AGENTS.md e docs/PAUSA_NFSE.md. Ao retomar notas fiscais, lembrar que o planejamento começou, distinguir propostas de implementação e revisar decisões ainda abertas."
+        },
+        {
+          "title": "Validação",
+          "text": "Escopo documental e de referências Git. Verificação do contrato do histórico e dos diffs; sem execução de testes do produto, alterações no banco, Kanban, IA ou infraestrutura."
+        },
+        {
+          "title": "Limitações",
+          "text": "Sem push ou deploy. As pastas antigas foram preservadas. A revisão do MVP, do Kanban e a definição da integração de IA ficam como próximo foco, sem execução nesta tarefa."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-arquivo-plano-nfse-details",
+      "changeId": "2026-10-15-arquivo-plano-nfse",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O trabalho fiscal anterior foi uma análise nesta conversa, sem autorização de implementação. A branch separada preserva o roteiro e a base financeira existente."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Branch paused/nfse nos três repositórios. Apenas pingo-doc contém o documento de planejamento específico da branch. Main mantém o aviso curto de pausa e o financeiro atual."
+        },
+        {
+          "title": "Validação",
+          "text": "Histórico e hooks de commit mantidos. Conferência de que a diferença da branch documental não acrescenta código, dependências ou migrations ao produto."
+        },
+        {
+          "title": "Limitações",
+          "text": "Plano é proposta não aprovada. Revalidar código, cenário de Rio Claro/SP, regime, credenciamento, provedor, regras e custos antes de retomar. Não mesclar o planejamento fiscal em main nesta tarefa."
         }
       ]
     }
