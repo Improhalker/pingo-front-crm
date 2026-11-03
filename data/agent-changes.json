@@ -228,6 +228,27 @@
       "agent": "Codex",
       "summary": "Separei o planejamento fiscal na branch paused/nfse da documentação e criei referências de retomada nos repositórios de frontend e backend, sem implementar código fiscal.",
       "detailsId": "2026-10-15-arquivo-plano-nfse-details"
+    },
+    {
+      "id": "2026-10-15-radar-financeiro-concorrentes",
+      "occurredAt": "2026-10-15T19:01:20.021Z",
+      "agent": "Codex",
+      "summary": "Criei radar HTML editável do PingoFin com Conta Azul, Nibo e Omie: preços, adicionais, lacunas do MVP e próximos passos. Navegação lateral, temas, download e impressão validados; NFS-e permanece pausada.",
+      "detailsId": "2026-10-15-radar-financeiro-concorrentes-details"
+    },
+    {
+      "id": "2026-11-03-backend-producao-docker",
+      "occurredAt": "2026-11-03T18:35:06.514Z",
+      "agent": "Codex",
+      "summary": "Preparei o backend para deploy isolado na VPS Hostinger: Docker PHP 8.5, MySQL/Redis, worker, sessão HTTPS, CI e guia operacional. Corrigi Symfony MIME; 162 testes e smoke Docker passaram. VPS inspecionada sem alterações remotas.",
+      "detailsId": "2026-11-03-backend-producao-docker-detalhes"
+    },
+    {
+      "id": "2026-11-03-publicacao-radar-deploy",
+      "occurredAt": "2026-11-03T19:02:34.411Z",
+      "agent": "Codex",
+      "summary": "Organizo a publicação do radar e da preparação de deploy em commits separados, com referências ao histórico privado. O CI valida API e imagem Docker; a ativação do backend na VPS permanece uma etapa própria.",
+      "detailsId": "2026-11-03-publicacao-radar-deploy-detalhes"
     }
   ],
   "details": [
@@ -988,6 +1009,80 @@
         {
           "title": "Limitações",
           "text": "Plano é proposta não aprovada. Revalidar código, cenário de Rio Claro/SP, regime, credenciamento, provedor, regras e custos antes de retomar. Não mesclar o planejamento fiscal em main nesta tarefa."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-radar-financeiro-concorrentes-details",
+      "changeId": "2026-10-15-radar-financeiro-concorrentes",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Usuário solicitou pesquisa de três referências de gestão financeira e comparação com o Pingo, usando a estrutura HTML do documento Starzy. Estudo documental, sem ranking comprovado de market share."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Relatório offline na documentação, com 18 seções, 17 fontes públicas, evidências de código, comparação, preços e adicionais. Textos/tabelas editáveis, cópia HTML baixável, filtros, mapa clicável e impressão pelo navegador."
+        },
+        {
+          "title": "Validação",
+          "text": "Chrome headless: âncoras, imagens/fontes offline, busca, filtro, edição de textos/tabelas e reabertura do download. Mobile 320/375 px sem overflow, temas e estilo de impressão conferidos; nenhum erro JavaScript observado."
+        },
+        {
+          "title": "Limitações",
+          "text": "Não houve conta paga ou teste de concorrentes, suite nova do produto, banco ou leitura/alteração de Kanban. Preços de 15/10/2026 sujeitos às condições. Não implementa IA ou fiscal, nem confirma prontidão de produção."
+        },
+        {
+          "title": "Preservação",
+          "text": "Marca e fonte existentes reutilizadas sem alterar assets originais. NFS-e segue pausada; branches preservadas. Referência Starzy apenas lida. Sem commit, push ou deploy nesta etapa."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-backend-producao-docker-detalhes",
+      "changeId": "2026-11-03-backend-producao-docker",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Backend será hospedado na VPS compartilhada com EspecializaCondutor e TheStarArt. API aprovada em api.pingofin.com.br; app.pingofin.com.br é proposta. Referências foram consultadas sem alterações."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Imagem não root com código protegido, ambiente validado, porta local e serviços/volumes próprios. Worker supervisionado; checagem técnica exige flag em produção. Migrations são explícitas, fora do build e da inicialização."
+        },
+        {
+          "title": "Segurança",
+          "text": "Atualizado somente symfony/mime 8.1.7 para 8.1.10; auditoria de produção sem avisos reportados. Segredos ficam fora da imagem/Git. Proxies explícitos, cookies seguros e CORS exato; root MySQL não é exposto ao runtime da aplicação."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram 162 testes/2.110 assertions, Pint, Composer, build/check Docker e Compose. Smoke real confirmou HTTP, cookies/CORS, worker e recuperação Redis/API. Gerador de segredos validou permissão 600 e recusa de sobrescrita."
+        },
+        {
+          "title": "Limitações",
+          "text": "SSH funcionou e VPS foi somente inspecionada: 1 vCPU, 3,8 GiB RAM, 33 GB livres. Não houve commit, push, deploy, DNS, TLS ou migration remota. Aceite público, backup/restore e monitoramento pendem. NFS-e e IA continuam fora do escopo."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-publicacao-radar-deploy-detalhes",
+      "changeId": "2026-11-03-publicacao-radar-deploy",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Usuário autorizou commits e push das entregas pendentes. Histórico do frontend precede backend e documentação; radar concluído em outubro permanece separado das mudanças de infraestrutura."
+        },
+        {
+          "title": "Publicação",
+          "text": "Referências em .agent-change.json apontam para o commit do frontend contendo cada registro. Hooks permanecem ativos; ambientes, credenciais e builds não entram no Git."
+        },
+        {
+          "title": "Validação",
+          "text": "Validador obrigatório e revisão do stage precedem os commits. Os resultados de CI remoto são acompanhados após o push e informados na conversa; não se presume sucesso apenas porque o workflow existe."
+        },
+        {
+          "title": "Limites",
+          "text": "Esta publicação no GitHub não ativa containers, migrations, DNS ou certificados na VPS. O CD ainda depende de configuração de acesso, ambiente protegido, imagens de release e verificação de saúde."
         }
       ]
     }
