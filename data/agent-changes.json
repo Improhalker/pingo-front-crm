@@ -256,6 +256,13 @@
       "agent": "Codex",
       "summary": "Corrijo a inicialização do smoke Docker no CI: --wait aguarda somente API e dependências com healthcheck; o worker inicia separadamente e é validado pelo processamento de um job real. Procedimento de produção atualizado.",
       "detailsId": "2026-11-03-compose-wait-worker-detalhes"
+    },
+    {
+      "id": "2026-11-03-deploy-automatico-main",
+      "occurredAt": "2026-11-03T20:16:55.609Z",
+      "agent": "Codex",
+      "summary": "Configuro deploy automático do backend a cada push na main, com CI reutilizável obrigatório antes do SSH. Reutilizo o ambiente production e o script restrito já existentes na VPS, mantendo acionamento manual opcional.",
+      "detailsId": "2026-11-03-deploy-automatico-main-detalhes"
     }
   ],
   "details": [
@@ -1112,6 +1119,36 @@
         {
           "title": "Limites",
           "text": "Correção dos scripts de verificação e operação, sem mudar a imagem de aplicação, regras financeiras ou infraestrutura remota. Produção permanece não ativada."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-deploy-automatico-main-detalhes",
+      "changeId": "2026-11-03-deploy-automatico-main",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Usuário solicitou publicação automática por push. API já está saudável na VPS; production tem os cinco secrets SSH configurados e não exige aprovação manual. Não foi necessário recriar usuários, chaves ou secrets."
+        },
+        {
+          "title": "Comportamento",
+          "text": "deploy.yml recebe push/main e workflow_dispatch; chama validate.yml via workflow_call e só libera o job de produção após API e imagem passarem. PRs mantêm CI próprio. Execuções de produção são serializadas sem cancelamento durante deploy."
+        },
+        {
+          "title": "Segurança",
+          "text": "SSH não interativo, host verificado, chave temporária no runner e SHA validado. Secrets ficam somente no job production, sem herança para os testes. O comando remoto continua restrito ao wrapper PingoFin existente."
+        },
+        {
+          "title": "Validação",
+          "text": "actionlint passou nos dois workflows. API HTTPS respondeu alive/ready antes do push. Os nomes dos cinco secrets e a ausência de aprovação manual foram conferidos sem expor valores. O primeiro CI/CD será acompanhado após publicar."
+        },
+        {
+          "title": "Limites",
+          "text": "O wrapper existente constrói a imagem na VPS; a migração futura para imagens em registry não é incluída. Nenhuma alteração nos outros projetos, usuários, certificados ou DNS integra esta configuração."
+        },
+        {
+          "title": "Ajuste do wrapper",
+          "text": "Corrigida somente a chamada preflight para selecionar NEW_IMAGE no Compose, em vez de passar PINGOFIN_IMAGE apenas ao container. Substituição atômica com backup root e bash -n; usuários, chaves e sudoers preservados."
         }
       ]
     }
