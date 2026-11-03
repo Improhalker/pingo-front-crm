@@ -263,6 +263,13 @@
       "agent": "Codex",
       "summary": "Configuro deploy automático do backend a cada push na main, com CI reutilizável obrigatório antes do SSH. Reutilizo o ambiente production e o script restrito já existentes na VPS, mantendo acionamento manual opcional.",
       "detailsId": "2026-11-03-deploy-automatico-main-detalhes"
+    },
+    {
+      "id": "2026-11-03-boas-vindas-api",
+      "occurredAt": "2026-11-03T20:34:30.653Z",
+      "agent": "Codex",
+      "summary": "Crio boas-vindas do Pingo na raiz pública da API, substituindo o redirecionamento para o JSON de liveness. Página sem sessão, scripts ou detalhes internos, com assets locais da marca; health checks permanecem separados.",
+      "detailsId": "2026-11-03-boas-vindas-api-detalhes"
     }
   ],
   "details": [
@@ -1149,6 +1156,36 @@
         {
           "title": "Ajuste do wrapper",
           "text": "Corrigida somente a chamada preflight para selecionar NEW_IMAGE no Compose, em vez de passar PINGOFIN_IMAGE apenas ao container. Substituição atômica com backup root e bash -n; usuários, chaves e sudoers preservados."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-boas-vindas-api-detalhes",
+      "changeId": "2026-11-03-boas-vindas-api",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "Usuário quer uma página de oi ao abrir api.pingofin.com.br e pediu avaliar a exposição pública. A rota Laravel raiz redirecionava para liveness; endpoints protegidos consultados sem login responderam 401, sem dados expostos."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Boas-vindas estática em view Laravel, com Pingo, Manrope e cores da marca locais. Somente GET / dispensa middleware web para não criar sessão ou depender do banco; demais rotas mantêm seus controles. Liveness/readiness não são removidos."
+        },
+        {
+          "title": "Proteção",
+          "text": "Página sem credenciais, versões, listagem de rotas, dados de negócio ou JavaScript. CSP restrita, noindex e nenhum formulário. Conhecer o domínio da API não substitui autenticação, autorização e isolamento por organização."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram 163 testes/2.118 assertions, Pint, build e smoke Docker incluindo HTML/assets. Chrome conferiu desktop, 375/320 px, teclado, imagens/fonte, ausência de cookies/recursos externos e erros CSP. CI/CD será acompanhado após o push."
+        },
+        {
+          "title": "Limites",
+          "text": "Conferência pontual não é uma auditoria completa de segurança. Sem alteração de DNS, Nginx, certificados, regras financeiras, módulo fiscal ou integração de IA."
+        },
+        {
+          "title": "Procedência",
+          "text": "PNG do Pingo e favicon copiados dos assets já existentes do frontend, sem alterar os originais. Manrope local com licença OFL preservada. Nenhuma imagem nova foi gerada ou identidade externa copiada."
         }
       ]
     }
