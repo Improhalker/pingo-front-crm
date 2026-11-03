@@ -249,6 +249,13 @@
       "agent": "Codex",
       "summary": "Organizo a publicação do radar e da preparação de deploy em commits separados, com referências ao histórico privado. O CI valida API e imagem Docker; a ativação do backend na VPS permanece uma etapa própria.",
       "detailsId": "2026-11-03-publicacao-radar-deploy-detalhes"
+    },
+    {
+      "id": "2026-11-03-compose-wait-worker",
+      "occurredAt": "2026-11-03T19:09:19.991Z",
+      "agent": "Codex",
+      "summary": "Corrijo a inicialização do smoke Docker no CI: --wait aguarda somente API e dependências com healthcheck; o worker inicia separadamente e é validado pelo processamento de um job real. Procedimento de produção atualizado.",
+      "detailsId": "2026-11-03-compose-wait-worker-detalhes"
     }
   ],
   "details": [
@@ -1083,6 +1090,28 @@
         {
           "title": "Limites",
           "text": "Esta publicação no GitHub não ativa containers, migrations, DNS ou certificados na VPS. O CD ainda depende de configuração de acesso, ambiente protegido, imagens de release e verificação de saúde."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-compose-wait-worker-detalhes",
+      "changeId": "2026-11-03-compose-wait-worker",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O primeiro CI remoto passou na API, frontend e documentação; a etapa de imagem falhou porque o Compose do runner tentou aguardar um healthcheck desabilitado do worker."
+        },
+        {
+          "title": "Comportamento",
+          "text": "Inicialização dividida: aguardar API/MySQL/Redis, iniciar worker sem espera HTTP e confirmar consumo do marcador técnico Redis. Não é adicionado healthcheck fictício ao worker. Guia de deploy segue o mesmo procedimento."
+        },
+        {
+          "title": "Validação",
+          "text": "Smoke local completo passou após a correção: HTTP, CORS/cookies, job real, queda/recuperação Redis e reinício da API. A execução remota será repetida no GitHub; suíte financeira original permanece intacta."
+        },
+        {
+          "title": "Limites",
+          "text": "Correção dos scripts de verificação e operação, sem mudar a imagem de aplicação, regras financeiras ou infraestrutura remota. Produção permanece não ativada."
         }
       ]
     }
