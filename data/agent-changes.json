@@ -270,6 +270,13 @@
       "agent": "Codex",
       "summary": "Crio boas-vindas do Pingo na raiz pública da API, substituindo o redirecionamento para o JSON de liveness. Página sem sessão, scripts ou detalhes internos, com assets locais da marca; health checks permanecem separados.",
       "detailsId": "2026-11-03-boas-vindas-api-detalhes"
+    },
+    {
+      "id": "2026-11-03-normalizar-permissoes-imagem",
+      "occurredAt": "2026-11-03T20:47:46.267Z",
+      "agent": "Codex",
+      "summary": "Corrijo o build Docker para checkouts com umask 077: código legível pelo usuário não root, diretórios acessíveis e configs com modo explícito. CI reproduz permissões restritas da VPS; segredos e backups continuam privados.",
+      "detailsId": "2026-11-03-normalizar-permissoes-imagem-detalhes"
     }
   ],
   "details": [
@@ -1186,6 +1193,32 @@
         {
           "title": "Procedência",
           "text": "PNG do Pingo e favicon copiados dos assets já existentes do frontend, sem alterar os originais. Manrope local com licença OFL preservada. Nenhuma imagem nova foi gerada ou identidade externa copiada."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-normalizar-permissoes-imagem-detalhes",
+      "changeId": "2026-11-03-normalizar-permissoes-imagem",
+      "sections": [
+        {
+          "title": "Contexto",
+          "text": "O primeiro envio da página passou no CI, mas falhou na VPS antes de trocar a API: checkout root com umask 077 gerou arquivos 600 e diretórios 700, preservados pelo COPY. O preflight manteve a versão anterior saudável."
+        },
+        {
+          "title": "Correção",
+          "text": "Imagem normaliza leitura/travessia do código sem conceder escrita a grupo/outros. Configs PHP/Apache e preflight recebem modo 644 explícito; entrypoint mantém 755. Só storage e bootstrap/cache pertencem ao usuário da aplicação."
+        },
+        {
+          "title": "Regressão",
+          "text": "Job de imagem passa a construir com arquivos 600 e diretórios 700 nos fontes de runtime, reproduzindo a VPS. O smoke real precisa abrir raiz, assets, API, sessão e fila nessa imagem para passar."
+        },
+        {
+          "title": "Validação",
+          "text": "Passaram actionlint, build com contexto tar de fontes 600/diretórios 700 e smoke completo: raiz HTML/assets, cookies/CORS, API, fila e recuperação Redis/reinício. A publicação remota será repetida pelo CI/CD com essa regressão."
+        },
+        {
+          "title": "Conexão SSH",
+          "text": "Adicionadas três tentativas para estabelecer conexão SSH, após timeout de rede no runner anterior. Não há loop de reexecução do comando remoto quando o resultado do deploy for desconhecido."
         }
       ]
     }
