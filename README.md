@@ -24,6 +24,14 @@ Código em app/; tipos e validador em shared/; rotas privadas em server/; testes
 
 [Mapa dos repositórios e validação da migração](../pingo-doc/MIGRACAO_REPOSITORIOS.md). [Regras dos agentes](./AGENTS.md).
 
+### Vercel: aplicativo oficial
+
+Domínio do frontend: https://app.pingofin.com.br. Em Production, configurar `NUXT_PUBLIC_API_BASE=https://api.pingofin.com.br` (origem, sem `/api/v1`, pois o CSRF usa `/sanctum/csrf-cookie`). Após mudar a variável, criar um novo deploy; a publicação anterior conserva sua configuração. Nunca usar localhost em Production.
+
+O padrão do build é a API oficial; somente `nuxt dev` usa localhost como padrão. A variável `NUXT_PUBLIC_API_BASE` continua disponível para ambientes próprios e testes. Não apontar previews automaticamente para dados reais: configurar sua API de testes antes de usar o login. Não enviar o arquivo .env local ao GitHub/Vercel.
+
+Usar o build Nuxt com servidor Nitro, sem exportação estática. O cliente HTTP mantém cookies e XSRF, e a rota privada do histórico usa a mesma base da API para autorizar a sessão master. A API deve permitir exatamente a origem do app, cookies Secure e domínio .pingofin.com.br.
+
 ## Histórico obrigatório
 
 A fonte única é o JSON privado em `../pingo-front-crm/data/agent-changes.json`. Toda tarefa de agente deve acrescentar entrada imutável com resumo de até 300 caracteres Unicode e detalhes separados para mudanças complexas. Nunca copie o JSON para outro repositório, public/, bundle do navegador, banco ou localStorage.

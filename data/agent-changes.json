@@ -277,6 +277,13 @@
       "agent": "Codex",
       "summary": "Corrijo o build Docker para checkouts com umask 077: código legível pelo usuário não root, diretórios acessíveis e configs com modo explícito. CI reproduz permissões restritas da VPS; segredos e backups continuam privados.",
       "detailsId": "2026-11-03-normalizar-permissoes-imagem-detalhes"
+    },
+    {
+      "id": "2026-11-12-api-producao-frontend",
+      "occurredAt": "2026-11-12T18:54:51.373Z",
+      "agent": "Codex",
+      "summary": "Corrigi a base padrão da API no frontend de produção para https://api.pingofin.com.br, mantendo localhost somente no desenvolvimento e a substituição por NUXT_PUBLIC_API_BASE. Documentei a configuração na Vercel e a separação de previews.",
+      "detailsId": "2026-11-12-api-producao-frontend-detalhes"
     }
   ],
   "details": [
@@ -1219,6 +1226,28 @@
         {
           "title": "Conexão SSH",
           "text": "Adicionadas três tentativas para estabelecer conexão SSH, após timeout de rede no runner anterior. Não há loop de reexecução do comando remoto quando o resultado do deploy for desconhecido."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-12-api-producao-frontend-detalhes",
+      "changeId": "2026-11-12-api-producao-frontend",
+      "sections": [
+        {
+          "title": "Causa",
+          "text": "app.pingofin.com.br estava usando a base localhost:8000 do runtimeConfig. A chamada de CSRF tentava conectar ao computador do usuário, antes de alcançar a API oficial."
+        },
+        {
+          "title": "Correção",
+          "text": "Base oficial no build; override $development para localhost. NUXT_PUBLIC_API_BASE continua suportada. Mesmo cliente HTTP e verificação de sessão master, sem mudanças de autenticação ou dados."
+        },
+        {
+          "title": "Verificação inicial",
+          "text": "CSRF oficial respondeu 204 com CORS do app e cookies Secure/.pingofin.com.br. Passaram typecheck, lint, formatação, 121 testes, build sem .env e teste HTTP do histórico privado. Loader confirmou localhost no dev e API oficial em produção."
+        },
+        {
+          "title": "Publicação",
+          "text": "Vercel já está vinculada ao GitHub. A correção será enviada à main para disparar deploy automático. A conexão Vercel deste chat não lista esse projeto; não foram lidos segredos ou alteradas variáveis de outros projetos."
         }
       ]
     }

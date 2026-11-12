@@ -11,7 +11,11 @@ export default defineNuxtConfig({
   // Manrope variable font is bundled locally (OFL 1.1); no external font request.
   css: ['@fontsource-variable/manrope', '~/assets/styles/base.css'],
   vite: { plugins: [tailwindcss()] },
-  runtimeConfig: { public: { apiBase: 'http://localhost:8000' } },
+  // Deploys use the official API unless NUXT_PUBLIC_API_BASE overrides it.
+  runtimeConfig: { public: { apiBase: 'https://api.pingofin.com.br' } },
+  $development: {
+    runtimeConfig: { public: { apiBase: 'http://localhost:8000' } },
+  },
   app: {
     head: {
       title: 'PingoFin',
